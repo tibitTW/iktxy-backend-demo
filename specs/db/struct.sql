@@ -1,5 +1,5 @@
 -- Table: users
-CREATE TABLE users (
+CREATE TABLE IF NOT EXISTS users (
     id INT PRIMARY KEY,
     name VARCHAR(255),
     pwd VARCHAR(255),
@@ -14,7 +14,7 @@ CREATE TABLE users (
 );
 
 -- Table: programs
-CREATE TABLE programs (
+CREATE TABLE IF NOT EXISTS programs (
     id INT PRIMARY KEY,
     name VARCHAR(255),
     programs_name_id INT,
@@ -31,7 +31,7 @@ CREATE TABLE programs (
 );
 
 -- Table: programs_name
-CREATE TABLE programs_name (
+CREATE TABLE IF NOT EXISTS programs_name (
     id INT PRIMARY KEY,
     name VARCHAR(255),
     description VARCHAR(255),
@@ -40,7 +40,7 @@ CREATE TABLE programs_name (
 );
 
 -- Table: holly_houses
-CREATE TABLE holly_houses (
+CREATE TABLE IF NOT EXISTS holly_houses (
     id INT PRIMARY KEY,
     name VARCHAR(255),
     gps_latitude FLOAT,
@@ -52,7 +52,7 @@ CREATE TABLE holly_houses (
 );
 
 -- Table: participate_records
-CREATE TABLE participate_records (
+CREATE TABLE IF NOT EXISTS participate_records (
     id INT PRIMARY KEY,
     user_id INT,
     program_id INT,
