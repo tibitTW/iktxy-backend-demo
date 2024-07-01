@@ -19,7 +19,8 @@ def main() -> None:
         table_name="users",
     )
 
-    users_table = db.get_table_in_df(table_name="users")
+    # get data in `users` table
+    users_table = db.get_query(table_name="users")
     print(users_table)
 
     db.disconnect()

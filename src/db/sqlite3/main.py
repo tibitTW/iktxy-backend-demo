@@ -42,24 +42,14 @@ class SQLiteDB(object):
             for row in csv_reader:
                 self.cursor.execute(sql_insert, row)
 
-    def get_table_in_df(
+    def get_query(
         self,
         table_name: str,
         columns: list | None = None,
     ) -> pd.DataFrame:
-        if not columns:
-            columns_str = "*"
-        else:
-            columns_str = ",".join(columns)
+        columns_str = ",".join(columns) if columns else "*"
 
         query = f"SELECT {columns_str} FROM {table_name}"
 
         df = pd.read_sql_query(query, self.conn)
         return df
-
-    def get_query(
-        self,
-        table: str,
-        columns: list | None = None,
-    ) -> pd.DataFrame:
-        return pd.read_sql_query("SELECT * FROM users", self.conn)
