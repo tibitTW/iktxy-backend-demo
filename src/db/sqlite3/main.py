@@ -12,9 +12,9 @@ class SQLiteDB(object):
         db_path: str,
     ) -> None:
         self._db_path = db_path
-        self._connect()
+        self.connect()
 
-    def _connect(self) -> None:
+    def connect(self) -> None:
         self.conn = sqlite3.connect(self._db_path)
         self.cursor = self.conn.cursor()
 
@@ -24,7 +24,7 @@ class SQLiteDB(object):
 
         self.cursor.executescript(sql_script)
 
-    def inject_data_from_csv(self, csv_path: str, table_name: str):
+    def inject_csv_data(self, csv_path: str, table_name: str):
         with open(csv_path, mode="r", encoding="utf-8") as csv_file:
             csv_reader = csv.reader(csv_file)
             headers = next(csv_reader)
