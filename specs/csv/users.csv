@@ -1,0 +1,21 @@
+id,name,pwd,email,first_name,last_name,phone,is_backend_user,backend_level,created_at,updated_at
+1,jdoe,password123,jdoe@example.com,John,Doe,555-1234,True,3,2024-06-01 08:30:00,2024-06-01 08:30:00
+2,asmith,securepwd,asmith@example.com,Anna,Smith,555-5678,False,0,2024-06-02 09:15:00,2024-06-02 09:15:00
+3,bjones,passw0rd,bjones@example.com,Bob,Jones,555-8765,True,2,2024-06-03 10:45:00,2024-06-03 10:45:00
+4,clee,1234abcd,clee@example.com,Charlie,Lee,555-4321,True,1,2024-06-04 11:20:00,2024-06-04 11:20:00
+5,dking,kingkong,dking@example.com,Diana,King,555-2345,False,0,2024-06-05 12:00:00,2024-06-05 12:00:00
+6,evans,easypassword,evans@example.com,Emily,Vans,555-3456,True,3,2024-06-06 12:45:00,2024-06-06 12:45:00
+7,fwhite,wh1t3,fwhite@example.com,Frank,White,555-4567,True,2,2024-06-07 13:30:00,2024-06-07 13:30:00
+8,gblack,bl4ck,gblack@example.com,Grace,Black,555-5679,False,0,2024-06-08 14:15:00,2024-06-08 14:15:00
+9,hgreen,greenie,hgreen@example.com,Hank,Green,555-6780,True,1,2024-06-09 15:00:00,2024-06-09 15:00:00
+10,ibrown,br0wnie,ibrown@example.com,Ivy,Brown,555-7891,True,3,2024-06-10 15:45:00,2024-06-10 15:45:00
+11,jmiller,millertime,jmiller@example.com,Jack,Miller,555-8902,False,0,2024-06-11 16:30:00,2024-06-11 16:30:00
+12,kkumar,kumar123,kkumar@example.com,Karen,Kumar,555-9013,True,2,2024-06-12 17:15:00,2024-06-12 17:15:00
+13,llopez,l0pez,llopez@example.com,Larry,Lopez,555-1235,True,1,2024-06-13 18:00:00,2024-06-13 18:00:00
+14,mmartin,m4rtin,mmartin@example.com,Mary,Martin,555-2346,False,0,2024-06-14 18:45:00,2024-06-14 18:45:00
+15,nnash,nash123,nnash@example.com,Nancy,Nash,555-3457,True,3,2024-06-15 19:30:00,2024-06-15 19:30:00
+16,owalker,walker1,owalker@example.com,Oscar,Walker,555-4568,True,2,2024-06-16 20:15:00,2024-06-16 20:15:00
+17,pthomas,thomas7,pthomas@example.com,Pat,Thomas,555-5670,False,0,2024-06-17 21:00:00,2024-06-17 21:00:00
+18,qrivers,rivers8,qrivers@example.com,Quinn,Rivers,555-6781,True,1,2024-06-18 21:45:00,2024-06-18 21:45:00
+19,sdavis,davis9,sdavis@example.com,Sam,Davis,555-7892,True,3,2024-06-19 22:30:00,2024-06-19 22:30:00
+20,troberts,roberts0,troberts@example.com,Tina,Roberts,555-8903,False,0,2024-06-20 23:15:00,2024-06-20 23:15:00
