@@ -1,6 +1,8 @@
 import csv
 import sqlite3
 
+import pandas as pd
+
 
 class SQLiteDB(object):
     _db_path: str
@@ -17,6 +19,10 @@ class SQLiteDB(object):
     def connect(self) -> None:
         self.conn = sqlite3.connect(self._db_path)
         self.cursor = self.conn.cursor()
+
+    def disconnect(self) -> None:
+        self.conn.commit()
+        self.conn.close()
 
     def load_sql(self, sql_filepath: str) -> None:
         with open(sql_filepath, "r", encoding="utf8") as sql_file:
@@ -35,3 +41,25 @@ class SQLiteDB(object):
 
             for row in csv_reader:
                 self.cursor.execute(sql_insert, row)
+
+    def get_table_in_df(
+        self,
+        table_name: str,
+        columns: list | None = None,
+    ) -> pd.DataFrame:
+        if not columns:
+            columns_str = "*"
+        else:
+            columns_str = ",".join(columns)
+
+        query = f"SELECT {columns_str} FROM {table_name}"
+
+        df = pd.read_sql_query(query, self.conn)
+        return df
+
+    def get_query(
+        self,
+        table: str,
+        columns: list | None = None,
+    ) -> pd.DataFrame:
+        return pd.read_sql_query("SELECT * FROM users", self.conn)
