@@ -1,0 +1,3 @@
+[tool.ruff]
+builtins = ["_"]
+line-length = 79
