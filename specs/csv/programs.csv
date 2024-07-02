@@ -1,0 +1,4 @@
+id,name,programs_name_id,type,start_time,end_time,duration_hour,holly_house_id,google_meet_url,youtube_url,created_at,updated_at
+1,Program A,1,1,2024-07-01 10:00:00,2024-07-01 12:00:00,2.0,1,https://meet.google.com/abc123,https://youtube.com/watch?v=xyz123,2024-06-01 08:30:00,2024-06-01 08:30:00
+2,Program B,2,2,2024-07-02 14:00:00,2024-07-02 16:00:00,2.0,2,https://meet.google.com/def456,https://youtube.com/watch?v=uvw456,2024-06-02 09:15:00,2024-06-02 09:15:00
+3,Program C,3,1,2024-07-03 09:00:00,2024-07-03 11:00:00,2.0,3,https://meet.google.com/ghi789,https://youtube.com/watch?v=123abc,2024-06-03 10:45:00,2024-06-03 10:45:00
