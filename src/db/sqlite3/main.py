@@ -1,4 +1,5 @@
 import csv
+import os
 import sqlite3
 
 import pandas as pd
@@ -23,6 +24,15 @@ class SQLiteDB(object):
     def disconnect(self) -> None:
         self.conn.commit()
         self.conn.close()
+
+    def clear(self) -> None:
+        if not os.path.exists(self._db_path):
+            return
+
+        try:
+            os.remove(self._db_path)
+        except OSError as e:
+            print(f"An error occurred: {e}")
 
     def load_sql(self, sql_filepath: str) -> None:
         with open(sql_filepath, "r", encoding="utf8") as sql_file:
