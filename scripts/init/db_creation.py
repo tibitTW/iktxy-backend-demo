@@ -3,25 +3,32 @@ from src.base.constants.path import (
     DB_PATH,
     SQL_SRC_PATH,
 )
-from src.db.sqlite3.main import SQLiteDB
+from src.dbapi.sqlite3.main import SQLiteDB
 
 
-def main() -> None:
+def main():
     print(DB_PATH)
     db = SQLiteDB(db_path=DB_PATH)
+
+    # clear old database
+    db.clear()
+    db.connect()
 
     # create database structure with existing .sql file
     db.load_sql(sql_filepath=SQL_SRC_PATH)
 
-    # sample data injection
-    db.inject_csv_data(
-        csv_path=f"{CSV_INJECTION_DIR_PATH}/users.csv",
-        table_name="users",
-    )
+    # insert sample data
+    tables = ["users", "programs", "holly_houses", "participate_records"]
+    for table in tables:
+        db.insert_csv_data(
+            csv_path=f"{CSV_INJECTION_DIR_PATH}/{table}.csv",
+            table_name=table,
+        )
 
-    # get data in `users` table
-    users_table = db.get_query(table_name="users")
-    print(users_table)
+        # get data
+        users_table = db.get_query(table_name=table)
+        print(f"{table=}")
+        print(users_table, end="\n\n")
 
     db.disconnect()
 
