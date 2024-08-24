@@ -1,4 +1,4 @@
-# create python virtual environment, install packages, etc.
+# create python virtual environment and install packages
 
 python -m venv .venv
 source .venv/bin/activate
