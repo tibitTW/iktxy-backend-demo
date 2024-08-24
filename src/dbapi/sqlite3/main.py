@@ -40,7 +40,7 @@ class SQLiteDB(object):
 
         self.cursor.executescript(sql_script)
 
-    def inject_csv_data(self, csv_path: str, table_name: str):
+    def insert_csv_data(self, csv_path: str, table_name: str):
         with open(csv_path, mode="r", encoding="utf-8") as csv_file:
             csv_reader = csv.reader(csv_file)
             headers = next(csv_reader)
