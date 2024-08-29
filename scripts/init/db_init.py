@@ -1,5 +1,5 @@
 from src.base.constants import DatabasePaths as DBPath
-from src.dbapi.sqlite3.main import SQLiteDB
+from src.db.sqlite3.main import SQLiteDB
 
 
 def main():
